@@ -1,0 +1,59 @@
+QUANTITATIVOS DE CAMPO – CBTU/STU-REC · v2.0.3
+App novo, feito sobre o motor da v1.5.1 do Levantamento de Campo (fotos, backup, restauração, offline).
+Dados separados: os dois apps podem ficar instalados no mesmo celular sem misturar nada.
+
+ARQUIVOS (publicar todos juntos)
+  index.html, app.<código>.js, jszip.<código>.js, sw.js, manifest.webmanifest, icon-192.png, icon-512.png
+  Não edite os arquivos à mão: peça a alteração e gere um pacote novo.
+
+PUBLICAR AO LADO DO APP DE LEVANTAMENTO
+  - Use pastas IRMÃS, nunca uma dentro da outra. Certo: /levantamento/ e /quantitativos/.
+    Errado: /levantamento/quantitativos/ (o app de Levantamento pode abrir no lugar deste).
+  - No mesmo endereço (domínio), os dois apps dividem o espaço de armazenamento do Chrome.
+    “Limpar dados do site” no Chrome apaga OS DOIS. Mantenha backup dos dois.
+
+COMO USAR EM CAMPO
+  1. ＋ Nova estação → confira os ambientes (cada um já vem com um tipo: Plataforma, Saguão, Sala técnica…).
+  2. Abra o ambiente. Aparecem os serviços do caderno do Lote 1 para aquele tipo.
+     Para cada serviço: Executar / Ok / N/A.
+  3. Executar abre a medição no critério do caderno (C × L, extensão, contagem, vão luz 1× ou 2×,
+     projeção horizontal, pintura de metal por vão/cubo/tubo, duas unidades como m² + m³).
+     O app calcula e guarda a fórmula. “Salvar e 📷” já tira a foto daquela medição.
+     Não aceita valores negativos, contagem fracionária, % acima de 100 nem ponto de milhar
+     (use 1250 ou 1,25). Vale também para a geometria do ambiente.
+     Sair de “Executar” num serviço com medições pede confirmação: as medições deixam de contar
+     (ficam guardadas e aparecem como pendência “fora da conta” até marcar Executar de novo).
+  4. “✓ Demais Ok” marca de uma vez o que não precisa de intervenção.
+  5. “＋ Serviço do caderno” inclui um item que não aparece no tipo do ambiente.
+  6. Geometria (opcional): piso, perímetro, pé-direito e vãos → permite lançar “30% das paredes”.
+  7. A aba “Anotações e fotos” do ambiente é o caderno da v1.5 (texto livre, ditado, fotos gerais).
+
+SAÍDAS (aba Exportar da estação)
+  - Planilha de quantitativos (.xlsx): Resumo (com pendências), Quantitativos na ordem do caderno,
+    Por ambiente, Memória de cálculo (fórmula + figuras) e Fotos.
+  - Relatório fotográfico (.docx) no modelo CBTU (fotos das medições entram com item e quantidade).
+  - Na tela inicial: Consolidado de todas as estações (.xlsx), com uma coluna por estação e total.
+  - Estação-tipo: Relatório › “Nova estação a partir desta” copia ambientes, tipos e geometria.
+
+CATÁLOGO
+  Vem embutido (124 serviços do caderno). Para mudar: na planilha do catálogo, marque “Usar no app?”
+  e ajuste os ambientes, baixe em CSV e importe em Configurações › Catálogo › Importar CSV.
+  Cada medição guarda a unidade e o critério com que foi lançada: trocar o catálogo não muda
+  medições antigas. A importação lista os itens com medições que mudariam. Se um item ficar com
+  medições em unidades diferentes (ex.: m² antigas e m novas), a planilha e o consolidado mostram
+  uma linha por unidade, nunca somam unidades diferentes.
+
+ROTEIRO DE ACEITE NO ANDROID (antes de usar em campo – só com dados fictícios)
+  0. Instalar este app e o de Levantamento (pastas irmãs), abrir cada um em modo avião e conferir
+     que um não abre a tela do outro e que as estações não se misturam.
+  1. Instalar (menu ⋮ → Adicionar à tela inicial) e abrir em modo avião.
+  2. Criar estação, lançar medições em 3 ambientes (com foto), gerar a planilha e abrir no Excel.
+  3. Backup da estação → excluir a estação → restaurar → conferir os totais.
+  4. Exportar: “Compartilhar” (WhatsApp, Drive, e-mail) e “Baixar”.
+  5. Volume: 150–300 fotos; backup por estação; .xlsx e .docx.
+  6. Persistência: lançar uma medição e fechar o app pelo multitarefa logo depois; reabrir e conferir.
+  7. Voltar do Android: com uma janela aberta (ex.: “Mover para outra etapa”), o Voltar deve fechar
+     só a janela, sem sair da tela.
+  8. Atualização: publicar uma versão nova de teste, abrir com sinal, aceitar “Nova versão”, voltar ao
+     modo avião e conferir que o app abre com os dados.
+  Nunca restaurar um teste sobre a única cópia de um levantamento real.
